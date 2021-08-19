@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>Javascript Events</title>
+    
+    <style>
+      h1 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <br>   <p id="para" onclick="showValue();">hi this is paragram</p>
+      <span id="spanData" onclick="showSpanData();">hi this is span</span>
+  <input type="text" placeholder="onKeypress" onkeydown="showDataOnKeyDown(this)"/>
+  <input id="txtUserName"  placeholder="for onchange" type="text" onchange="onChange();"/>
+  
+<button id="btnclick" onclick="showData()" onmouseover="mouseOver();"  onmouseout="mouseOut();" >click Here</button>
+  
+ 
+    <script>
+      
+       function showValue()
+       {
+        alert( document.getElementById("para").innerHTML);
+       }
+       function showSpanData()
+       {
+        alert( document.getElementById("spanData").innerHTML);
+       }
+        function onChange()
+        {
+            document.getElementById("txtUserName").value;
+         alert(document.getElementById("txtUserName").value);
+        }
+        function showData()
+        {
+            alert("you have clicked on button");
+        }
+        function showDataOnKeyDown(data)
+        {
+            console.log(data.value);
+        }
+        function mouseOver()
+        {
+         document.getElementById("btnclick").innerHTML="Overed";
+        }
+        function mouseOut()
+        {
+         document.getElementById("btnclick").innerHTML="Click Here";
+        }
+    </script>
+  </body>
+</html>

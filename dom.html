@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title>dom(document object modeling)</title>
+  </head>
+  <body>
+    <p id="para">hi this is vivek</p>
+    <input id="usrName" value="Vivek" type="text" />
+    <script>
+      document.getElementById("para").innerHTML = "student";
+      var name = document.getElementById("usrName").value;
+      console.log("selected name is ", name);
+      document.getElementById("usrName").value = "Ak";
+    </script>
+  </body>
+</html>
