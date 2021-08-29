@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom Creation</title>
+  </head>
+  <body>
+    <div id="renderDom"></div>
+    <h5><b>Hi this is first h5</b></h5>
+
+    <script>
+      var divref = document.getElementById("renderDom");
+      var heading1 = document.createElement("h1");
+      var h1node = document.createTextNode("hi");
+      var heading2 = document.createElement("h2");
+      var h2node = document.createTextNode("hi");
+      heading1.appendChild(h1node);
+      heading2.appendChild(h2node);
+      divref.appendChild(heading1);
+      //  document.getElementById("renderDom").style.color = "blue";
+      divref.appendChild(heading2);
+      var data = document.getElementsByTagName("h5")[0].innerHTML;
+      var datawithText = document.getElementsByTagName("h5")[0].innerText;
+      document.getElementsByTagName("h1")[0].style.color = "blue";
+
+      console.log("innerhtml", data);
+      console.log("innerText", datawithText);
+    </script>
+  </body>
+</html>
