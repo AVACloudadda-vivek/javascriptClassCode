@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<br lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Forms</title>
+    <style>
+      h2 {
+        text-align: center;
+        color: coral;
+      }
+    
+    </style>
+  </head>
+  <br>
+    <h2>User Registration</h2>
+    <form id="formdata" method="post" onsubmit="return formValidation()">
+    <input type="text" name="userName" id="userName" placeholder="user name" /></br></br>
+    <input type="password" name="password" id="password" placeholder="password" /></br></br>
+    <input type="password" name="passwordconfirm" id="confirmPass" placeholder="confirm password" /></br></br>
+    <input type="submit" value="Login" />
+    </form>
+
+
+    <script>
+        function formValidation()
+        {
+           
+            var userName = document.getElementById("userName").value;
+            var password = document.getElementById("password").value;
+            var confirmPass = document.getElementById("confirmPass").value;
+
+            if(userName.trim()!=="" && password!=="" && confirmPass!=="")
+            {
+             if(password.length>=8 && password.length<=12)
+             {
+               if(password==confirmPass)
+               {
+                 alert("successfully logged in");               
+                
+                 return false;
+               }
+               else{
+                   alert("Password and confirm password should match");
+                   return false;
+               }
+             }
+             else{
+                 alert("password should have min of 8 char and max 12 ");
+                 return false;
+             }
+            }
+            else{
+                alert("user name, password, password confirm cann't be blank ");
+               return false;
+            }
+
+
+           
+
+
+        }
+    </script>
+
+
+  </body>
+</html>
